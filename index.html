@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  margin: 0;
+  background: transparent;
+  overflow: hidden;
+}
+img {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  width: 500px;
+}
+</style>
+</head>
+<body>
+
+<img id="overlayImage">
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const img = params.get("img");
+
+if (img) {
+  document.getElementById("overlayImage").src = img;
+}
+</script>
+
+</body>
+</html>
